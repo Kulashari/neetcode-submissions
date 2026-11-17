@@ -1,0 +1,17 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int expectedSum = 0;
+        int realSum = 0;
+
+        for (int i = 0; i<nums.length; i++){
+            realSum+=nums[i];
+        }
+
+        for (int i = 0; i<=nums.length; i++){
+            expectedSum+=i;
+        }
+
+
+        return expectedSum - realSum;
+    }
+}
